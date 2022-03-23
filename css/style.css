@@ -1,0 +1,44 @@
+/*Color del fondo*/
+header {
+    background-color: #000000;
+    /*Anchura de toda la pagina*/
+}
+body {
+    background-color: #b92f2f;
+}
+
+.titulo {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav {
+    background-color: #fff;
+}
+
+li {
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    /*Quitar los puntos de las listas*/
+    list-style: none;
+    /*Poner en horizontal*/
+    display: inline-block;
+}
+
+.registro {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.ocultar {
+    display: none;
+}
+
+.mostrar {
+    display: block;
+}

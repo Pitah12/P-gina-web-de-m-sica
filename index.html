@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Formulario De Registro</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <div class="contenedor">
+                <form onsubmit="validar()" action="conexion.py" method="post">
+                        <div class="contenedor-inputs">
+                                <input type="text" name="nombre" placeholder="Nombre">
+                                <input type="text" name="apellido" placeholder="Apellido">
+                                <input type="text" name="correo" placeholder="Correo">
+                                <input type="text" name="password" placeholder="Password">
+
+                                <ul class="error" id="error"></ul>
+                        </div>
+                        <input type="submit" class="btn" name="registrarse" value="Registrate">
+                </form>
+        </div>
+        <!--Script de javascript-->
+        <script type="text/javascript">
+                function validar(){
+                        var nombre = document.getElementById("nombre").value;
+                        var apellido = document.getElementById("apellido").value;
+                        var correo = document.getElementById("correo").value;
+                        var password = document.getElementById("password").value;
+
+                        var error = document.getElementById("error");
+                        var error_cont = 0;
+
+                        if(nombre.length == 0){
+                                error.innerHTML += "<li>El campo nombre no puede estar vacio</li>";
+                                error_cont++;
+                        }
+
+                        if(apellido.length == 0){
+                                error.innerHTML += "<li>El campo apellido no puede estar vacio</li>";
+                                error_cont++;
+                        }
+
+                        if(correo.length == 0){
+                                error.innerHTML += "<li>El campo correo no puede estar vacio</li>";
+                                error_cont++;
+                        }
+
+                        if(password.length == 0){
+                                error.innerHTML += "<li>El campo password no puede estar vacio</li>";
+                                error_cont++;
+                        }
+
+                        if(error_cont > 0){
+                                return false;
+                        }else{
+                                return true;
+                        }
+                }
+        </script>
+</body>
+</html>
